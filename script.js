@@ -1,5 +1,5 @@
 function notasAluno(listaAlunos){
-    var acumulado = "<table><thead><tr>"
+    let acumulado = "<table><thead><tr>"
     + "<th>Nome</th>"
     + "<th>RA</th>"
     + "<th>P1</th>"
@@ -8,14 +8,14 @@ function notasAluno(listaAlunos){
     + "</tr></thead>"
     + "<tbody>";
 
-    var classeP1 = 0, classeP2 = 0, aprovados = 0, dp = 0;
+    let classeP1 = 0, classeP2 = 0, aprovados = 0, dp = 0;
 
     for(let i = 0; i<listaAlunos.length; i++){
 
-        var P1 = Number(listaAlunos[i].P1);
-        var P2 = Number(listaAlunos[i].P2);
+        let P1 = Number(listaAlunos[i].P1);
+        let P2 = Number(listaAlunos[i].P2);
 
-        var media = (P1+P2) / 2;
+        let media = (P1+P2) / 2;
 
         classeP1 += P1;
         classeP2 += P2;
@@ -26,7 +26,7 @@ function notasAluno(listaAlunos){
             dp++;
         }
 
-        var corMedia = media >= 6 ? 'blue' : 'red';
+        let corMedia = media >= 6 ? 'blue' : 'red';
 
         acumulado = acumulado
                     + "<tr><td>"+listaAlunos[i].nome+"</td>"
